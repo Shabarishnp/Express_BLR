@@ -4,13 +4,20 @@ import {
   getData,
   postData,
   putData,
+  getDataById,
+  // getOne,
+  // removeData,
 } from "../controllers/mobileController.js";
+import { get } from "mongoose";
 
 const router = express.Router();
 
 router.get("/", getData);
+router.get("/:idn", getDataById);
+// router.get("/brand/:brand", getOne);
+// router.delete("/:id", removeData);
 router.post("/", postData);
-router.put("/", putData);
-router.delete("/", deleteData);
+router.put("/:id", putData);
+router.delete("/:id", deleteData);
 
 export default router;
