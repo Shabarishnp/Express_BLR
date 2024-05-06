@@ -12,6 +12,7 @@ import express from "express";
 import appleRoute from "./routes/apple.js";
 import samsungRoute from "./routes/samsung.js";
 import mongoose from "mongoose";
+import cors from 'cors';
 // import router from "./routes/apple.js";
 
 const app = express();
