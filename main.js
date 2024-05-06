@@ -15,7 +15,8 @@ import mongoose from "mongoose";
 // import router from "./routes/apple.js";
 
 const app = express();
-app.use(express.json()); 
+app.use(cors())
+app.use(express.json());
 app.use("/mobile/apple", appleRoute);
 app.use("/mobile/samsung", samsungRoute);
 // app.use("/mobile/router", router);
@@ -31,4 +32,3 @@ mongoose
 app.listen(1010, () => {
   console.log("server connected");
 });
-
